@@ -1,0 +1,403 @@
+{
+ "total_selected": 1251,
+ "tune": 626,
+ "holdout": 625,
+ "mass_coverage_pct": 86.8,
+ "per_source": {
+  "PubMedQA": {
+   "full_count": 466,
+   "wanted": 83,
+   "got": 83
+  },
+  "ArcMMLU": {
+   "full_count": 396,
+   "wanted": 71,
+   "got": 71
+  },
+  "MMLUPro_computer science": {
+   "full_count": 392,
+   "wanted": 70,
+   "got": 18
+  },
+  "LiveCodeBench": {
+   "full_count": 385,
+   "wanted": 69,
+   "got": 69
+  },
+  "NarrativeQA": {
+   "full_count": 383,
+   "wanted": 68,
+   "got": 68
+  },
+  "GeoBench": {
+   "full_count": 330,
+   "wanted": 0,
+   "got": 0
+  },
+  "MMLUPro_history": {
+   "full_count": 325,
+   "wanted": 58,
+   "got": 56
+  },
+  "MedMCQA": {
+   "full_count": 304,
+   "wanted": 54,
+   "got": 54
+  },
+  "MMLUPro_engineering": {
+   "full_count": 280,
+   "wanted": 50,
+   "got": 50
+  },
+  "MMLUPro_health": {
+   "full_count": 222,
+   "wanted": 40,
+   "got": 40
+  },
+  "MusicTheoryBench": {
+   "full_count": 221,
+   "wanted": 39,
+   "got": 39
+  },
+  "QANTA_Literature": {
+   "full_count": 221,
+   "wanted": 39,
+   "got": 39
+  },
+  "MMLUPro_math": {
+   "full_count": 205,
+   "wanted": 37,
+   "got": 37
+  },
+  "MMLUPro_psychology": {
+   "full_count": 187,
+   "wanted": 33,
+   "got": 33
+  },
+  "MMLUPro_economics": {
+   "full_count": 186,
+   "wanted": 33,
+   "got": 33
+  },
+  "MMLUPro_business": {
+   "full_count": 166,
+   "wanted": 30,
+   "got": 30
+  },
+  "MMLUPro_law": {
+   "full_count": 158,
+   "wanted": 28,
+   "got": 28
+  },
+  "MathQA": {
+   "full_count": 158,
+   "wanted": 0,
+   "got": 0
+  },
+  "MMLUPro_biology": {
+   "full_count": 143,
+   "wanted": 26,
+   "got": 26
+  },
+  "QANTA_History": {
+   "full_count": 116,
+   "wanted": 21,
+   "got": 21
+  },
+  "OpenTDB_Science: Computers": {
+   "full_count": 115,
+   "wanted": 21,
+   "got": 20
+  },
+  "OpenTDB_General Knowledge": {
+   "full_count": 112,
+   "wanted": 20,
+   "got": 20
+  },
+  "MMLU_formal_logic": {
+   "full_count": 108,
+   "wanted": 19,
+   "got": 11
+  },
+  "SuperGLUE-Wic": {
+   "full_count": 102,
+   "wanted": 18,
+   "got": 18
+  },
+  "Ethics_commonsense": {
+   "full_count": 100,
+   "wanted": 18,
+   "got": 18
+  },
+  "MMLUPro_physics": {
+   "full_count": 97,
+   "wanted": 17,
+   "got": 17
+  },
+  "OpenTDB_Entertainment: Books": {
+   "full_count": 96,
+   "wanted": 17,
+   "got": 8
+  },
+  "MMLUPro_chemistry": {
+   "full_count": 90,
+   "wanted": 16,
+   "got": 16
+  },
+  "WMT19-gu-en": {
+   "full_count": 89,
+   "wanted": 16,
+   "got": 16
+  },
+  "AsDiv": {
+   "full_count": 88,
+   "wanted": 0,
+   "got": 0
+  },
+  "QANTA_Science": {
+   "full_count": 86,
+   "wanted": 15,
+   "got": 15
+  },
+  "SuperGLUE-RC": {
+   "full_count": 84,
+   "wanted": 0,
+   "got": 0
+  },
+  "ChessInstruct_mcq": {
+   "full_count": 80,
+   "wanted": 0,
+   "got": 0
+  },
+  "MMLUPro_philosophy": {
+   "full_count": 77,
+   "wanted": 14,
+   "got": 14
+  },
+  "QANTA_Fine Arts": {
+   "full_count": 75,
+   "wanted": 13,
+   "got": 13
+  },
+  "FinQA": {
+   "full_count": 74,
+   "wanted": 0,
+   "got": 0
+  },
+  "MMLU_management": {
+   "full_count": 73,
+   "wanted": 13,
+   "got": 13
+  },
+  "SuperGLUE-QA": {
+   "full_count": 69,
+   "wanted": 12,
+   "got": 12
+  },
+  "Ethics_virtue": {
+   "full_count": 68,
+   "wanted": 12,
+   "got": 12
+  },
+  "ChessInstruct": {
+   "full_count": 68,
+   "wanted": 12,
+   "got": 12
+  },
+  "SuperGLUE-Entailment": {
+   "full_count": 66,
+   "wanted": 12,
+   "got": 12
+  },
+  "Ethics_deontology": {
+   "full_count": 63,
+   "wanted": 11,
+   "got": 11
+  },
+  "WMT19-de-en": {
+   "full_count": 62,
+   "wanted": 11,
+   "got": 11
+  },
+  "SocialiQA": {
+   "full_count": 61,
+   "wanted": 0,
+   "got": 0
+  },
+  "SuperGLUE-ClozeTest": {
+   "full_count": 59,
+   "wanted": 0,
+   "got": 0
+  },
+  "OpenTDB_Entertainment: Video Games": {
+   "full_count": 59,
+   "wanted": 11,
+   "got": 11
+  },
+  "OpenTDB_Geography": {
+   "full_count": 59,
+   "wanted": 11,
+   "got": 11
+  },
+  "OpenTDB_History": {
+   "full_count": 57,
+   "wanted": 10,
+   "got": 10
+  },
+  "QANTA_Social Science": {
+   "full_count": 55,
+   "wanted": 10,
+   "got": 10
+  },
+  "MATH": {
+   "full_count": 55,
+   "wanted": 10,
+   "got": 10
+  },
+  "OpenTDB_Vehicles": {
+   "full_count": 55,
+   "wanted": 10,
+   "got": 10
+  },
+  "Ethics_justice": {
+   "full_count": 52,
+   "wanted": 9,
+   "got": 9
+  },
+  "OpenTDB_Celebrities": {
+   "full_count": 52,
+   "wanted": 0,
+   "got": 0
+  },
+  "QANTA_Geography": {
+   "full_count": 46,
+   "wanted": 8,
+   "got": 8
+  },
+  "QANTA_Philosophy": {
+   "full_count": 45,
+   "wanted": 8,
+   "got": 8
+  },
+  "GeoGraphyData_100k": {
+   "full_count": 45,
+   "wanted": 0,
+   "got": 0
+  },
+  "AIME": {
+   "full_count": 39,
+   "wanted": 7,
+   "got": 7
+  },
+  "SuperGLUE-Wsc": {
+   "full_count": 34,
+   "wanted": 6,
+   "got": 6
+  },
+  "WMT19-zh-en": {
+   "full_count": 32,
+   "wanted": 6,
+   "got": 6
+  },
+  "OpenTDB_Science: Mathematics": {
+   "full_count": 32,
+   "wanted": 6,
+   "got": 6
+  },
+  "SuperGLUE-CausalReasoning": {
+   "full_count": 29,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Science & Nature": {
+   "full_count": 28,
+   "wanted": 5,
+   "got": 5
+  },
+  "WMT19-cs-en": {
+   "full_count": 26,
+   "wanted": 5,
+   "got": 5
+  },
+  "WMT19-fi-en": {
+   "full_count": 25,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Animals": {
+   "full_count": 25,
+   "wanted": 5,
+   "got": 5
+  },
+  "GSM8K": {
+   "full_count": 24,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Entertainment: Film": {
+   "full_count": 22,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Entertainment: Japanese Anime & Manga": {
+   "full_count": 22,
+   "wanted": 0,
+   "got": 0
+  },
+  "OpenTDB_Entertainment: Board Games": {
+   "full_count": 20,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Art": {
+   "full_count": 19,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Entertainment: Cartoon & Animations": {
+   "full_count": 19,
+   "wanted": 0,
+   "got": 0
+  },
+  "OpenTDB_Entertainment: Comics": {
+   "full_count": 19,
+   "wanted": 0,
+   "got": 0
+  },
+  "OpenTDB_Entertainment: Music": {
+   "full_count": 19,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Entertainment: Musicals & Theatres": {
+   "full_count": 19,
+   "wanted": 0,
+   "got": 0
+  },
+  "OpenTDB_Entertainment: Television": {
+   "full_count": 19,
+   "wanted": 5,
+   "got": 5
+  },
+  "OpenTDB_Sports": {
+   "full_count": 19,
+   "wanted": 5,
+   "got": 5
+  },
+  "WMT19-lt-en": {
+   "full_count": 16,
+   "wanted": 5,
+   "got": 5
+  },
+  "WMT19-kk-en": {
+   "full_count": 5,
+   "wanted": 5,
+   "got": 5
+  },
+  "WMT19-ru-en": {
+   "full_count": 2,
+   "wanted": 5,
+   "got": 5
+  }
+ }
+}
