@@ -21,10 +21,9 @@ Public methodology repo for the **lemonade-router** submission to
 
 ## Compliance in one paragraph
 
-RouterArena is evaluation-only: no router component may be trained or tuned on its data or labels. Every threshold and design choice in this submission is justified only by (i) the external calibration set in this repo, (ii) our own runtime/token telemetry, or (iii) public graded submissions already in the RouterArena repo — the same information available to every submitter. Full-set labels were touched only by pre-registered scoring runs of frozen configurations. The calibration manifest exists so this claim is checkable.
+RouterArena is evaluation-only: no router component may be trained or tuned on its data or labels. Every threshold and design choice in this submission is justified only by (i) the external calibration set in this repo, (ii) our own runtime/token telemetry. Full-set labels were touched only by pre-registered scoring runs of frozen configurations. The calibration manifest exists so this claim is checkable.
 
 ## Replication
 
 The submission PR against RouterArena contains the complete replication recipe (candidate models, routing policy, and the standard RouterArena pipeline commands). Short version: serve `deepseek-v4-flash` (ds4 recipe) and `Qwen3.8-27B-GGUF-UD-Q4_K_XL` (llamacpp recipe) with the public Lemonade release, set `OPENROUTER_API_KEY`, and run the RouterArena pipeline with router name `lemonade-router`. The local side is deterministic (temperature 0, thinking disabled); we verified the local IQ2XXS DeepSeek-V4-Flash quant scores identically to the API model on the calibration set.
 
-Raw generation logs (all local and cloud passes, full responses) total several GB and contain RouterArena prompt content, so they are not republished here; they are available to RouterArena maintainers on request: ramkrishna2910@gmail.com.
