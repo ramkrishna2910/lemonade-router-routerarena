@@ -1,15 +1,15 @@
 # lemonade-router — RouterArena submission methodology
 
-Supporting artifacts for the **lemonade-router** submission to [RouterArena](https://github.com/RouteWorks/RouterArena): a local-first tri-ensemble router in which two of three voters run on the submitter's own hardware via [Lemonade](https://github.com/lemonade-sdk/lemonade), AMD's open-source local LLM server. **~80% of the benchmark is answered entirely on-device.**
+Supporting artifacts for the **lemonade-router** submission to [RouterArena](https://github.com/RouteWorks/RouterArena): a local-first router built on three on-device models (two generator voters and an embedding referee), all served by a single instance of [Lemonade](https://github.com/lemonade-sdk/lemonade), AMD's open-source local LLM server, plus one cloud voter. **~80% of the benchmark is answered entirely on-device.**
 
-**Final verified scores** (RouterArena's own evaluation code, full 8,400-query split): accuracy **78.03%** · **$0.171/1K queries** · arena score (β=0.10) **76.74** · robustness **73.1** · 0 abnormal entries.
+**Final verified scores** (RouterArena's own evaluation code, full 8,400-query split): accuracy **78.10%** · **$0.178/1K queries** · arena score (β=0.10) **76.75** · robustness **73.6** · 0 abnormal entries.
 
 ## Contents
 
 | Path | What it is |
 |---|---|
 | [`METHODOLOGY.md`](METHODOLOGY.md) | The submitted policy, the provenance of every design constant, and how each claim can be checked |
-| [`policy/assemble_v51.py`](policy/assemble_v51.py) | The frozen routing policy, exactly as run to produce the submitted predictions |
+| [`policy/assemble_v52.py`](policy/assemble_v52.py) | The frozen routing policy, exactly as run to produce the submitted predictions |
 | [`calibration/build_calibration.py`](calibration/build_calibration.py) | Builder for the 1,251-item external calibration set (sampled from the upstream public benchmarks, deduplicated against every RouterArena split) |
 | [`calibration/calibration_manifest.jsonl`](calibration/calibration_manifest.jsonl) | Per-item source + SHA-256 hashes — verify the dedup claim without us redistributing benchmark content |
 | [`calibration/coverage_report.json`](calibration/coverage_report.json) | Source-mass coverage of the calibration set (86.8%) |
