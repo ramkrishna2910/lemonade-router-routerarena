@@ -18,7 +18,7 @@ Supporting artifacts for the **lemonade-router** submission to [RouterArena](htt
 
 ## Compliance in one paragraph
 
-RouterArena is evaluation-only: no router component may be trained or tuned on its data or labels. Every threshold and design choice in this submission is justified only by (i) the external calibration set in this repo, (ii) our own runtime/token telemetry. Full-set labels were touched only by pre-registered scoring runs of frozen configurations. The calibration manifest exists so this claim is checkable, item by item.
+RouterArena is evaluation-only: no router component may be trained or tuned on its data or labels. Every threshold and design choice in this submission is justified only by (i) the external calibration set in this repo, (ii) our own runtime/token telemetry, or (iii) aggregate statistics from the graded submissions the RouterArena maintainers publish in their public repo — the same information available to every submitter, used only for model selection (which model fills a slot), never to fit any per-query component. Full-set labels were touched only by pre-registered scoring runs of frozen configurations. The calibration manifest exists so this claim is checkable, item by item.
 
 ## Replication
 

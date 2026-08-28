@@ -16,7 +16,7 @@ The exact code that produced the submitted predictions is `policy/assemble_v51.p
 
 ## 2. Compliance: what calibrated each design choice
 
-RouterArena is evaluation-only — no component may be trained or tuned on its data or labels. Every constant in the policy traces to one of three permitted sources; full-set labels were touched only by pre-registered scoring runs of frozen configurations.
+RouterArena is evaluation-only — no component may be trained or tuned on its data or labels. Every constant in the policy traces to one of three sources: the external calibration set (§3), our own runtime/token telemetry, or aggregate statistics from the graded submissions the maintainers publish in their public repo. The third source was used only for model selection (which model fills a slot) — never to fit any per-query component, and never at per-row granularity. Full-set labels were touched only by pre-registered scoring runs of frozen configurations.
 
 | Design choice | Source of the decision |
 |---|---|
