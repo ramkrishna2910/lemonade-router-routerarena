@@ -1,6 +1,6 @@
-# lemonade-router — Design & Calibration Methodology
+# lemonade-liquid-router — Design & Calibration Methodology
 
-Supporting documentation for the **lemonade-router** RouterArena submission: what the routing policy is, where every design constant came from, and how each claim can be checked.
+Supporting documentation for the **lemonade-liquid-router** RouterArena submission: what the routing policy is, where every design constant came from, and how each claim can be checked.
 
 **Final verified scores** (RouterArena's own evaluation code, full 8,400-query split): accuracy **78.10%** · **$0.178/1K queries** · arena score (β=0.10) **76.75** · robustness **73.6** · 0 abnormal entries (`telemetry/scores.json`).
 

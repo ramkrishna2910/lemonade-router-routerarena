@@ -1,6 +1,6 @@
-# lemonade-router — RouterArena submission methodology
+# lemonade-liquid-router — RouterArena submission methodology
 
-Supporting artifacts for the **lemonade-router** submission to [RouterArena](https://github.com/RouteWorks/RouterArena): a local-first router built on three on-device models (two generator voters and an embedding referee), all served by a single instance of [Lemonade](https://github.com/lemonade-sdk/lemonade), AMD's open-source local LLM server, plus one cloud voter. **~80% of the benchmark is answered entirely on-device.**
+Supporting artifacts for the **lemonade-liquid-router** submission to [RouterArena](https://github.com/RouteWorks/RouterArena): a local-first router built on three on-device models (two generator voters and an embedding referee), all served by a single instance of [Lemonade](https://github.com/lemonade-sdk/lemonade), AMD's open-source local LLM server, plus one cloud voter. **~80% of the benchmark is answered entirely on-device.**
 
 **Final verified scores** (RouterArena's own evaluation code, full 8,400-query split): accuracy **78.10%** · **$0.178/1K queries** · arena score (β=0.10) **76.75** · robustness **73.6** · 0 abnormal entries.
 
@@ -22,5 +22,5 @@ RouterArena is evaluation-only: no router component may be trained or tuned on i
 
 ## Replication
 
-The submission PR against RouterArena contains the complete recipe: serve `deepseek-v4-flash` (ds4 recipe) and `Qwen3.8-27B-GGUF-UD-Q4_K_XL` (llamacpp recipe) with the public Lemonade release, set `OPENROUTER_API_KEY`, and run the standard RouterArena pipeline with router name `lemonade-router`. The local side is deterministic (temperature 0, thinking disabled); the local IQ2XXS DeepSeek-V4-Flash quant scores identically to the API model on the calibration set.
+The submission PR against RouterArena contains the complete recipe: serve `deepseek-v4-flash` (ds4 recipe) and `Qwen3.8-27B-GGUF-UD-Q4_K_XL` (llamacpp recipe) with the public Lemonade release, set `OPENROUTER_API_KEY`, and run the standard RouterArena pipeline with router name `lemonade-liquid-router`. The local side is deterministic (temperature 0, thinking disabled); the local IQ2XXS DeepSeek-V4-Flash quant scores identically to the API model on the calibration set.
 
