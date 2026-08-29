@@ -22,7 +22,7 @@ flowchart TD
 
     C -- "MCQ<br/>(Options: present)" --> V["DS4-Flash + Qwen3.8 + gemini<br/>answer independently"]
     V --> M{2-of-3 majority<br/>on boxed letters?}
-    M -- "yes" --> W([submit majority member's answer<br/>local preferred: DS4 > Qwen > gemini])
+    M -- "yes" --> W(["submit majority member's answer<br/>local preferred: DS4 &gt; Qwen &gt; gemini"])
     M -- "no" --> G2[gemini-3-flash-preview]
     G2 --> A2([submit gemini answer])
 
