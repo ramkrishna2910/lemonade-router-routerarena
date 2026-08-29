@@ -12,6 +12,42 @@ Three voters — **DeepSeek-V4-Flash** (IQ2XXS quant, served locally by [Lemonad
 - **MCQ** (`Options:` present) → all three voters answer independently; extracted boxed letters take a 2-of-3 majority vote; the submitted response comes from a majority member, local models preferred. No majority → gemini-3-flash-preview.
 - **Free-answer** → both local models answer; if Qwen corroborates DeepSeek (exact match or token-F1 ≥ 0.5 on the extracted final answers), the local DeepSeek answer is submitted; otherwise gemini-3-flash-preview. When either side produced no boxed answer (the comparison ran on degraded last-200-chars extracts), keeping the local answer additionally requires the embedding referee: cosine ≥ 0.7 between the two extracts (**embedding veto**).
 
+
+```mermaid
+flowchart TD
+    Q([RouterArena query]) --> C{Prompt shape}
+
+    C -- "code<br/>(no Options, no boxed)" --> G1[gemini-3-flash-preview]
+    G1 --> A1([submit gemini answer])
+
+    C -- "MCQ<br/>(Options: present)" --> V["DS4-Flash + Qwen3.8 + gemini<br/>answer independently"]
+    V --> M{2-of-3 majority<br/>on boxed letters?}
+    M -- "yes" --> W([submit majority member's answer<br/>local preferred: DS4 > Qwen > gemini])
+    M -- "no" --> G2[gemini-3-flash-preview]
+    G2 --> A2([submit gemini answer])
+
+    C -- "free-answer" --> L["DS4-Flash + Qwen3.8 answer<br/>(both on-device)"]
+    L --> E["extract final answers<br/>(boxed content when present)"]
+    E --> F{exact match or<br/>token-F1 &ge; 0.5?}
+    F -- "no" --> G3[gemini-3-flash-preview]
+    G3 --> A3([submit gemini answer])
+    F -- "yes" --> B{boxed on<br/>both sides?}
+    B -- "yes" --> D1([submit DS4 answer])
+    B -- "no (degraded<br/>last-200-chars extracts)" --> J{"LFM2.5-Embedding-350M<br/>cosine &ge; 0.7?"}
+    J -- "yes" --> D2([submit DS4 answer])
+    J -- "no (embedding veto)" --> G4[gemini-3-flash-preview]
+    G4 --> A4([submit gemini answer])
+
+    classDef local fill:#d3f0d3,stroke:#2d7a2d,color:#1a4a1a;
+    classDef cloud fill:#dbe9fb,stroke:#3468b0,color:#1a3a6a;
+    classDef judge fill:#fdeecd,stroke:#c08a2d,color:#6a4a10;
+    class V,L,E local;
+    class G1,G2,G3,G4 cloud;
+    class J judge;
+```
+
+*Green = on-device via Lemonade (DS4-Flash, Qwen3.8; the token-F1 comparison is plain string arithmetic, no model involved). Amber = the on-device Liquid referee (embeddings endpoint). Blue = the cloud call. gemini also participates as the third MCQ voter; on the free-answer path it is contacted only after an escalation decision.*
+
 The exact code that produced the submitted predictions is `policy/assemble_v52.py`; the same policy is implemented as a live router class in the submission PR. ~80% of the benchmark is answered entirely on-device. The local side is deterministic (temperature 0, thinking disabled, `max_tokens` 4096).
 
 ## 2. Compliance: what calibrated each design choice
